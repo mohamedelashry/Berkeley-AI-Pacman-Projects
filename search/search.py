@@ -84,14 +84,13 @@ def generalGraph(problem, structure):
     """
 
     # Push the root node/start into the data structure in this format: [(state, action taken, cost)]
-    # The list pushed into the structure for the second node will look something like this:
     # [(root_state, "Stop", 0), (new_state, "North", 1)]
     structure.push([(problem.getStartState(), "Stop", 0)])
 
-    # Initialise the list of visited nodes to an empty list
+    # Initialise the list of visited nodes 
     visited = []
 
-    # While the structure is not empty, i.e. there are still elements to be searched,
+    # While the structure is not empty there are still elements to be searched,
     while not structure.isEmpty():
         # get the path returned by the data structure's .pop() method
         path = structure.pop()
